@@ -1,7 +1,7 @@
 <!-- 4. GIAO DIỆN LUYỆN TẬP (QUIZ VIEW) -->
 <div id="quiz-view" class="app-view">
   <div class="back-nav">
-    <button class="btn btn-danger btn-quit-quiz">Quit ❌ Thoát luyện tập</button>
+    <button class="btn btn-danger btn-quit-quiz"><i data-lucide="x-circle" class="lucide-icon glow-pink"></i> Thoát luyện tập</button>
   </div>
   
   <div class="quiz-container-split">
@@ -30,7 +30,7 @@
       
       <!-- Hộp lời giải chi tiết (hiển thị sau khi trả lời) -->
       <div id="explanation-box" class="explanation-box hidden">
-        <h4>💡 Lời giải chi tiết:</h4>
+        <h4><i data-lucide="lightbulb" class="lucide-icon glow-yellow"></i> Lời giải chi tiết:</h4>
         <p id="explanation-content"></p>
       </div>
     </div>
@@ -39,8 +39,8 @@
     <div class="quiz-sidebar-container">
       <!-- Tab Navigation -->
       <div class="sidebar-tabs">
-        <button class="tab-btn active" id="tab-btn-scratch">📝 Bảng Vẽ Nháp</button>
-        <button class="tab-btn disabled" id="tab-btn-ai" disabled>🤖 Trợ Lý Thầy Vũ Trụ</button>
+        <button class="tab-btn active" id="tab-btn-scratch"><i data-lucide="pencil-ruler" class="lucide-icon glow-cyan"></i> Bảng Vẽ Nháp</button>
+        <button class="tab-btn disabled" id="tab-btn-ai" disabled><i data-lucide="bot" class="lucide-icon glow-green"></i> Trợ Lý Thầy Vũ Trụ</button>
       </div>
 
       <!-- Nội dung Bảng vẽ nháp -->
@@ -50,7 +50,7 @@
           <button class="canvas-color-btn color-pink" data-color="#ff455f"></button>
           <button class="canvas-color-btn color-green" data-color="#00ff88"></button>
           <button class="canvas-color-btn color-white" data-color="#ffffff"></button>
-          <button class="btn btn-secondary btn-xs" id="btn-clear-canvas">🧹 Xóa</button>
+          <button class="btn btn-secondary btn-xs" id="btn-clear-canvas"><i data-lucide="eraser" class="lucide-icon"></i> Xóa</button>
         </div>
         <div class="canvas-wrapper">
           <canvas id="scratchpad-canvas" width="350" height="280"></canvas>
@@ -79,6 +79,6 @@
   
   <!-- Thanh điều hướng câu tiếp theo -->
   <div class="quiz-footer hidden" id="quiz-footer-actions">
-    <button id="btn-next-question" class="btn btn-success btn-glow">Câu Tiếp Theo ➡️</button>
+    <button id="btn-next-question" class="btn btn-success btn-glow">Câu Tiếp Theo <i data-lucide="arrow-right" class="lucide-icon"></i></button>
   </div>
 </div>

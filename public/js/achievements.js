@@ -4,18 +4,20 @@
 const AchievementsList = [
   {
     id: 'first_quiz',
-    title: '🌌 Tân Binh Vũ Trụ',
+    title: 'Tân Binh Vũ Trụ',
     desc: 'Hoàn thành bài luyện tập trắc nghiệm đầu tiên.',
-    icon: '🚀',
+    icon: 'rocket',
+    glowColor: 'glow-cyan',
     check: () => {
       return localStorage.getItem('achievement_first_quiz') === 'true';
     }
   },
   {
     id: 'rocket_master',
-    title: '☄️ Phi Công Siêu Đẳng',
+    title: 'Phi Công Siêu Đẳng',
     desc: 'Đạt trên 50 mét bay xa trong game Rocket Math.',
-    icon: '🛰️',
+    icon: 'navigation',
+    glowColor: 'glow-cyan',
     check: () => {
       return localStorage.getItem('achievement_rocket_master') === 'true' || 
              (window.AppState && window.AppState.highScore >= 50);
@@ -23,18 +25,20 @@ const AchievementsList = [
   },
   {
     id: 'geometry_expert',
-    title: '📐 Kỹ Sư Hình Học',
+    title: 'Kỹ Sư Hình Học',
     desc: 'Hoàn thành tất cả bài thực hành vẽ hình phẳng (Geogebra).',
-    icon: '🎨',
+    icon: 'palette',
+    glowColor: 'glow-purple',
     check: () => {
       return localStorage.getItem('achievement_geometry_expert') === 'true';
     }
   },
   {
     id: 'scratch_master',
-    title: '✏️ Họa Sĩ Toán Học',
+    title: 'Họa Sĩ Toán Học',
     desc: 'Sử dụng bảng nháp vẽ tay tính toán tối thiểu 5 lần.',
-    icon: '🖌️',
+    icon: 'brush',
+    glowColor: 'glow-cyan',
     check: () => {
       const count = parseInt(localStorage.getItem('user_scratch_count') || '0');
       return count >= 5;
@@ -42,9 +46,10 @@ const AchievementsList = [
   },
   {
     id: 'designer_formula',
-    title: '🏗️ Kỹ Sư Thiết Kế',
+    title: 'Kỹ Sư Thiết Kế',
     desc: 'Tương tác thử nghiệm tất cả 5 loại hình học phẳng.',
-    icon: '🏢',
+    icon: 'layout',
+    glowColor: 'glow-green',
     check: () => {
       const viewedList = JSON.parse(localStorage.getItem('viewed_shapes_list') || '[]');
       return viewedList.length === 5;
@@ -52,9 +57,10 @@ const AchievementsList = [
   },
   {
     id: 'scholars_level',
-    title: '👑 Nhà Bác Học Nhí',
+    title: 'Nhà Bác Học Nhí',
     desc: 'Đạt Cấp độ học tập tối thiểu Cấp 10.',
-    icon: '🦉',
+    icon: 'graduation-cap',
+    glowColor: 'glow-yellow',
     check: () => {
       return window.AppState && window.AppState.level >= 10;
     }
@@ -89,8 +95,11 @@ function renderAchievements() {
       ? `<p class="badge-date">Mở khóa: ${localStorage.getItem(unlockKey) || 'Hôm nay'}</p>`
       : '';
 
+    // Icon phát sáng nếu đã mở khóa, mờ xám nếu chưa mở khóa
+    const iconClass = isUnlocked ? `lucide-icon ${badge.glowColor}` : 'lucide-icon';
+
     card.innerHTML = `
-      <div class="badge-icon">${badge.icon}</div>
+      <div class="badge-icon"><i data-lucide="${badge.icon}" class="${iconClass}"></i></div>
       <div class="badge-details">
         <h4>${badge.title}</h4>
         <p>${badge.desc}</p>
@@ -99,6 +108,11 @@ function renderAchievements() {
     `;
     container.appendChild(card);
   });
+
+  // Chuyển đổi các placeholders thành SVG
+  if (window.lucide) {
+    lucide.createIcons();
+  }
 }
 
 // Hàm kiểm tra và cập nhật huy hiệu

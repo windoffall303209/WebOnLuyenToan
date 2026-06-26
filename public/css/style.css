@@ -2658,3 +2658,105 @@ body.light-theme .bg-primary {
   border-color: rgba(37, 99, 235, 0.2);
 }
 
+/* ==========================================================================
+   LUCIDE ICONS & COSMIC NEON GLOW STYLES
+   ========================================================================== */
+.lucide-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 2.2px;
+  vertical-align: middle;
+  display: inline-block;
+  stroke: currentColor;
+  fill: none;
+  transition: var(--transition-smooth);
+}
+
+/* Kích thước bổ trợ cho các nút/badge */
+.btn .lucide-icon {
+  margin-right: 0.5rem;
+}
+.btn-icon .lucide-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.logo .lucide-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: 0.5rem;
+}
+.cosmic-avatar-main .lucide-icon {
+  width: 5rem;
+  height: 5rem;
+}
+.tool-icon .lucide-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+.planet-visual .lucide-icon {
+  width: 5rem;
+  height: 5rem;
+}
+.badge-icon .lucide-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Lớp màu phát quang (Neon Glows) */
+.glow-cyan {
+  color: var(--color-primary, #00f0ff) !important;
+  filter: drop-shadow(0 0 5px rgba(0, 240, 255, 0.7));
+}
+.glow-pink {
+  color: var(--color-error, #ff455f) !important;
+  filter: drop-shadow(0 0 5px rgba(255, 69, 95, 0.7));
+}
+.glow-green {
+  color: var(--color-success, #00ff88) !important;
+  filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.7));
+}
+.glow-yellow {
+  color: #ffdd57 !important;
+  filter: drop-shadow(0 0 5px rgba(255, 221, 87, 0.7));
+}
+.glow-purple {
+  color: #c084fc !important;
+  filter: drop-shadow(0 0 5px rgba(192, 132, 252, 0.7));
+}
+.glow-orange {
+  color: #fb923c !important;
+  filter: drop-shadow(0 0 5px rgba(251, 146, 60, 0.7));
+}
+
+/* Hover effects for interactive icons */
+.nav-btn:hover .lucide-icon,
+.btn-select-chapter:hover .lucide-icon,
+.btn-start-game:hover .lucide-icon,
+.badge-card.unlocked:hover .lucide-icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Light Theme Overrides for Icons */
+body.light-theme .lucide-icon {
+  filter: none !important; /* Tắt phát sáng neon ở chế độ sáng để đảm bảo độ tương phản */
+}
+body.light-theme .glow-cyan {
+  color: #0284c7 !important; /* Ocean Blue */
+}
+body.light-theme .glow-pink {
+  color: #dc2626 !important; /* Deep Red */
+}
+body.light-theme .glow-green {
+  color: #16a34a !important; /* Deep Green */
+}
+body.light-theme .glow-yellow {
+  color: #d97706 !important; /* Darker Gold */
+}
+body.light-theme .glow-purple {
+  color: #7c3aed !important; /* Deep Purple */
+}
+body.light-theme .glow-orange {
+  color: #ea580c !important; /* Deep Orange */
+}
+

@@ -1,11 +1,11 @@
 <!-- 8. GIAO DIỆN TRẢI NGHIỆM ĐẦU TƯ KINH DOANH -->
 <div id="game-business-view" class="app-view">
   <div class="back-nav">
-    <button class="btn btn-danger btn-quit-game">Thoát ❌</button>
+    <button class="btn btn-danger btn-quit-game"><i data-lucide="x-circle" class="lucide-icon"></i> Thoát</button>
   </div>
   
   <div class="business-layout glass-card">
-    <h3>💼 Hoạt động trải nghiệm: Đầu tư kinh doanh</h3>
+    <h3><i data-lucide="briefcase" class="lucide-icon glow-green"></i> Hoạt động trải nghiệm: Đầu tư kinh doanh</h3>
     <p class="subtitle">Tính toán số dư tài khoản của công ty thông qua các phép toán số nguyên âm và dương.</p>
     
     <div class="business-grid">
@@ -18,7 +18,7 @@
           <p class="question-prompt" id="business-question-text">Tổng số tiền lời/lỗ hiện tại của em là bao nhiêu?</p>
           <div class="business-answer-area">
             <input type="number" id="business-answer" placeholder="Điền số tiền (Ví dụ: -200 hoặc 300)...">
-            <button class="btn btn-primary" id="btn-submit-business">Kiểm tra 🧾</button>
+            <button class="btn btn-primary" id="btn-submit-business"><i data-lucide="check-square" class="lucide-icon"></i> Kiểm tra</button>
           </div>
           <p id="business-feedback" class="feedback-text"></p>
         </div>
@@ -26,7 +26,7 @@
       
       <div class="business-status-panel">
         <div class="wallet-visual">
-          <span class="wallet-icon">🏦</span>
+          <span class="wallet-icon"><i data-lucide="landmark" class="lucide-icon glow-green"></i></span>
           <div>
             <h5>Số dư tài khoản:</h5>
             <h3 id="business-balance-text" class="neon-text">0k VNĐ</h3>
@@ -37,10 +37,10 @@
           <div class="avatar-balloon">
             "Chào nhà đầu tư nhí! Số tiền chi ra (lỗ) sẽ là số âm. Số tiền thu về (lời) sẽ là số dương. Hãy cộng tất cả lại nhé!"
           </div>
-          <div class="helper-avatar">👨‍💼</div>
+          <div class="helper-avatar"><i data-lucide="user" class="lucide-icon glow-cyan" style="width: 3.5rem; height: 3.5rem;"></i></div>
         </div>
         
-        <button class="btn btn-success w-100" id="btn-next-business">Giao dịch tiếp theo 💼</button>
+        <button class="btn btn-success w-100" id="btn-next-business">Giao dịch tiếp theo <i data-lucide="arrow-right" class="lucide-icon"></i></button>
       </div>
     </div>
   </div>

@@ -19,6 +19,11 @@ function initApp() {
   
   // Lắng nghe thay đổi hash
   window.addEventListener('hashchange', handleRouting);
+  
+  // Khởi tạo các icons Lucide ban đầu
+  if (window.lucide) {
+    lucide.createIcons();
+  }
 }
 
 if (document.readyState === 'loading') {
@@ -203,11 +208,14 @@ async function loadUserHistory() {
         <td><strong>${item.lesson_title}</strong></td>
         <td><span class="badge ${item.score_correct === item.total_questions ? 'bg-success' : 'bg-primary'}">${item.score_correct}/${item.total_questions} câu đúng</span></td>
         <td><span class="text-success">+${item.xp_earned} XP</span></td>
-        <td><span class="text-warning">⭐ ${item.stars_earned}</span></td>
+        <td><span class="text-warning"><i data-lucide="star" class="lucide-icon glow-yellow"></i> ${item.stars_earned}</span></td>
         <td><small class="text-muted">${dateStr}</small></td>
       `;
       tableBody.appendChild(tr);
     });
+    if (window.lucide) {
+      lucide.createIcons();
+    }
   } catch (error) {
     console.error('Lỗi khi tải lịch sử:', error);
     tableBody.innerHTML = '<tr><td colspan="5" class="text-center text-danger">Lỗi tải dữ liệu lịch sử từ server.</td></tr>';
@@ -609,11 +617,14 @@ async function loadChapterLessons(chapterNum, updateHash = true) {
           <p>${lesson.description || ''}</p>
         </div>
         <button class="btn btn-primary btn-sm btn-start-lesson" data-id="${lesson.id}" data-title="§${lesson.lesson_num}. ${lesson.title}">
-          Vào luyện tập ✏️
+          Vào luyện tập <i data-lucide="play-circle" class="lucide-icon"></i>
         </button>
       `;
       container.appendChild(row);
     });
+    if (window.lucide) {
+      lucide.createIcons();
+    }
 
     // Gắn sự kiện bắt đầu luyện tập
     document.querySelectorAll('.btn-start-lesson').forEach(btn => {

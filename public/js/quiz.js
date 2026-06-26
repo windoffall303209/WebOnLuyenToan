@@ -101,7 +101,9 @@ async function startQuiz(lessonId, lessonTitle, updateHash = true) {
     window.switchView('quiz-view', false);
     showQuestion(0);
     clearScratchpad(); // Xóa sạch bảng nháp cho câu hỏi mới
-    
+    if (window.lucide) {
+      lucide.createIcons();
+    }
   } catch (error) {
     console.error('Lỗi khởi chạy luyện tập:', error);
     alert('Không thể kết nối CSDL để lấy câu hỏi. Vui lòng kiểm tra MySQL server.');
