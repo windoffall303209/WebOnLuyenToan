@@ -1,0 +1,71 @@
+<!-- 5. GIAO DIỆN THƯ VIỆN CÔNG THỨC TƯƠNG TÁC -->
+<div id="formula-view" class="app-view">
+  <h2 class="text-center">📐 Thư Viện Công Thức Tương Tác</h2>
+  <p class="text-center subtitle">Thay đổi các giá trị để quan sát công thức toán học thay đổi trực quan</p>
+  
+  <div class="formula-tabs">
+    <button class="formula-tab-btn active" data-category="arithmetic">Số học (Trục số)</button>
+    <button class="formula-tab-btn" data-category="geometry">Hình học (Diện tích SVG)</button>
+  </div>
+  
+  <!-- Phân hệ Số học: Trục số số nguyên -->
+  <div id="formula-arithmetic" class="formula-panel active glass-card">
+    <h3>🔴 Mô hình Phép cộng/trừ số nguyên trên trục số</h3>
+    <p>Điều chỉnh các số hạng để xem cách di chuyển trên trục số của phép tính.</p>
+    
+    <div class="arithmetic-controls">
+      <div class="control-group">
+        <label for="num-a">Số hạng thứ nhất (a): <span id="val-a">0</span></label>
+        <input type="range" id="num-a" min="-5" max="5" value="0">
+      </div>
+      <div class="control-group">
+        <label for="num-b">Số hạng thứ hai (b): <span id="val-b">0</span></label>
+        <input type="range" id="num-b" min="-5" max="5" value="0">
+      </div>
+    </div>
+    
+    <div class="equation-display">
+      <span id="eq-a">0</span> + (<span id="eq-b">0</span>) = <span id="eq-result" class="neon-text">0</span>
+    </div>
+    
+    <div class="interactive-axis-container">
+      <!-- Trục số tương tác được vẽ động bằng SVG -->
+      <svg id="axis-svg" viewBox="0 0 500 120" width="100%"></svg>
+    </div>
+  </div>
+  
+  <!-- Phân hệ Hình học: Slider SVG -->
+  <div id="formula-geometry" class="formula-panel glass-card">
+    <h3>🔷 Mô hình tính Chu vi & Diện tích Hình học</h3>
+    <p>Chọn hình học và di chuyển thanh trượt để thay đổi kích thước.</p>
+    
+    <div class="geometry-split">
+      <div class="geom-menu">
+        <button class="geom-btn active" data-shape="square">Hình vuông</button>
+        <button class="geom-btn" data-shape="rectangle">Hình chữ nhật</button>
+        <button class="geom-btn" data-shape="rhombus">Hình thoi</button>
+        <button class="geom-btn" data-shape="parallelogram">Hình bình hành</button>
+        <button class="geom-btn" data-shape="trapezoid">Hình thang cân</button>
+      </div>
+      
+      <div class="geom-interactive-area">
+        <div class="geom-sliders" id="geom-sliders-container">
+          <!-- Tạo động theo từng hình -->
+        </div>
+        <div class="geom-display-box">
+          <div class="svg-canvas-container" id="geom-svg-container">
+            <!-- Vẽ SVG hình học động -->
+          </div>
+          <div class="formula-details-box">
+            <h4 id="geom-name">Hình vuông</h4>
+            <p class="formula-expression" id="geom-formula-text">Chu vi: C = 4 × a <br> Diện tích: S = a²</p>
+            <div class="calculation-result">
+              <p>Phép tính: <span id="geom-calc-steps">4 × 5</span></p>
+              <p class="final-score">Kết quả: <span id="geom-result-val" class="neon-text">20 cm²</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

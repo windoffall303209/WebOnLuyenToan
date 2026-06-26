@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 250" width="100%" height="100%">
+  <rect width="500" height="250" rx="15" fill="#0b0f19" stroke="#1f2937" stroke-width="2"/>
+  
+  <!-- 1. Hình chữ nhật (Trái trên: x=30, y=40, w=100, h=60) -->
+  <g transform="translate(10, 0)">
+    <rect x="30" y="50" width="100" height="60" fill="none" stroke="#a78bfa" stroke-width="2"/>
+    <line x1="80" y1="35" x2="80" y2="125" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="15" y1="80" x2="145" y2="80" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="80" y="140" fill="#a78bfa" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Hình chữ nhật</text>
+  </g>
+  
+  <!-- 2. Hình vuông (Phải trên: x=160, y=40, size=60) -->
+  <g transform="translate(20, 0)">
+    <rect x="150" y="50" width="60" height="60" fill="none" stroke="#34d399" stroke-width="2"/>
+    <!-- Trực dọc, ngang, 2 đường chéo -->
+    <line x1="180" y1="35" x2="180" y2="125" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="135" y1="80" x2="225" y2="80" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <line x1="145" y1="45" x2="215" y2="115" stroke="#f472b6" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="215" y1="45" x2="145" y2="115" stroke="#f472b6" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="180" y="140" fill="#34d399" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Hình vuông</text>
+  </g>
+
+  <!-- 3. Hình thang cân (Trái dưới: x=280, y=50, w_top=50, w_bot=90, h=60) -->
+  <g transform="translate(10, 0)">
+    <!-- Đỉnh: (300, 50), (350, 50), (370, 110), (280, 110) -->
+    <polygon points="300,50 350,50 370,110 280,110" fill="none" stroke="#38bdf8" stroke-width="2"/>
+    <line x1="325" y1="35" x2="325" y2="125" stroke="#f472b6" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="325" y="140" fill="#38bdf8" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Hình thang cân</text>
+  </g>
+
+  <!-- 4. Hình bình hành (Phải dưới: x=400, y=50) -->
+  <g transform="translate(10, 0)">
+    <!-- Đỉnh: (420, 50), (480, 50), (460, 110), (400, 110) -->
+    <polygon points="420,50 480,50 460,110 400,110" fill="none" stroke="#fb923c" stroke-width="2"/>
+    <!-- Không vẽ trục đối xứng -->
+    <text x="440" y="140" fill="#fb923c" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">Hình bình hành</text>
+  </g>
+  
+  <text x="250" y="215" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Trục đối xứng (nét đứt hồng) của một số hình phẳng</text>
+</svg>

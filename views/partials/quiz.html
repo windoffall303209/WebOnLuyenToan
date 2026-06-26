@@ -1,0 +1,84 @@
+<!-- 4. GIAO DIỆN LUYỆN TẬP (QUIZ VIEW) -->
+<div id="quiz-view" class="app-view">
+  <div class="back-nav">
+    <button class="btn btn-danger btn-quit-quiz">Quit ❌ Thoát luyện tập</button>
+  </div>
+  
+  <div class="quiz-container-split">
+    <!-- Cột trái: Nội dung câu hỏi và làm bài -->
+    <div class="quiz-main-card glass-card">
+      <div class="quiz-header">
+        <span id="quiz-lesson-title" class="badge">Bài 1: Tập hợp</span>
+        <span id="quiz-progress-text" class="quiz-progress">Câu 1 / 5</span>
+      </div>
+      
+      <!-- Đề bài và minh họa -->
+      <div class="question-body">
+        <h3 id="question-text">Đang tải câu hỏi...</h3>
+        <div id="question-illustration" class="question-img-container hidden">
+          <!-- Load SVG hoặc Image -->
+        </div>
+      </div>
+      
+      <!-- Khung điền đáp án -->
+      <div id="answer-inputs-container">
+        <!-- Chứa các nút trắc nghiệm hoặc ô nhập điền số -->
+      </div>
+      
+      <!-- Nút xác nhận trả lời (dành cho điền khuyết) -->
+      <button id="btn-submit-answer" class="btn btn-primary btn-glow hidden">Nộp bài làm</button>
+      
+      <!-- Hộp lời giải chi tiết (hiển thị sau khi trả lời) -->
+      <div id="explanation-box" class="explanation-box hidden">
+        <h4>💡 Lời giải chi tiết:</h4>
+        <p id="explanation-content"></p>
+      </div>
+    </div>
+
+    <!-- Cột phải: Bảng vẽ nháp Canvas & Chatbot AI chất vấn -->
+    <div class="quiz-sidebar-container">
+      <!-- Tab Navigation -->
+      <div class="sidebar-tabs">
+        <button class="tab-btn active" id="tab-btn-scratch">📝 Bảng Vẽ Nháp</button>
+        <button class="tab-btn disabled" id="tab-btn-ai" disabled>🤖 Trợ Lý Thầy Vũ Trụ</button>
+      </div>
+
+      <!-- Nội dung Bảng vẽ nháp -->
+      <div id="scratch-panel" class="sidebar-panel active">
+        <div class="canvas-controls">
+          <button class="canvas-color-btn color-cyan active" data-color="#00f0ff"></button>
+          <button class="canvas-color-btn color-pink" data-color="#ff455f"></button>
+          <button class="canvas-color-btn color-green" data-color="#00ff88"></button>
+          <button class="canvas-color-btn color-white" data-color="#ffffff"></button>
+          <button class="btn btn-secondary btn-xs" id="btn-clear-canvas">🧹 Xóa</button>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas id="scratchpad-canvas" width="350" height="280"></canvas>
+          <p class="canvas-hint">Dùng chuột hoặc ngón tay để viết nháp tính toán tại đây</p>
+        </div>
+      </div>
+
+      <!-- Nội dung Khung Chatbot AI -->
+      <div id="ai-panel" class="sidebar-panel">
+        <div class="chat-container">
+          <div class="chat-messages" id="chat-messages-container">
+            <div class="message system">
+              Trả lời câu hỏi bên trái để khởi chạy trợ lý AI kiểm tra tư duy!
+            </div>
+          </div>
+          <div class="chat-input-area hidden" id="chat-input-form-container">
+            <form id="chat-form">
+              <input type="text" id="chat-input" placeholder="Nhập lời giải thích của em..." required autocomplete="off">
+              <button type="submit" class="btn btn-primary">Gửi</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Thanh điều hướng câu tiếp theo -->
+  <div class="quiz-footer hidden" id="quiz-footer-actions">
+    <button id="btn-next-question" class="btn btn-success btn-glow">Câu Tiếp Theo ➡️</button>
+  </div>
+</div>

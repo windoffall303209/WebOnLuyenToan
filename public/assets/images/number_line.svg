@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 150" width="100%" height="100%">
+  <rect width="450" height="150" rx="15" fill="#0b0f19" stroke="#1f2937" stroke-width="2"/>
+  
+  <!-- Trục số -->
+  <line x1="40" y1="80" x2="410" y2="80" stroke="#00f0ff" stroke-width="3" filter="drop-shadow(0px 0px 4px rgba(0,240,255,0.4))"/>
+  
+  <!-- Mũi tên -->
+  <polygon points="410,75 422,80 410,85" fill="#00f0ff"/>
+  
+  <!-- Các khấc vạch và nhãn số -->
+  <!-- Mỗi vạch cách nhau 40px, điểm 0 ở 250px -->
+  
+  <!-- Vạch -5 (50px) -->
+  <line x1="50" y1="73" x2="50" y2="87" stroke="#9ca3af" stroke-width="2"/>
+  <text x="50" y="110" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">-5</text>
+  
+  <!-- Vạch -4 (90px) -->
+  <line x1="90" y1="73" x2="90" y2="87" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="90" cy="80" r="6" fill="#ff455f" filter="drop-shadow(0px 0px 5px #ff455f)"/>
+  <text x="90" y="110" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">-4</text>
+  
+  <!-- Vạch -3 (130px) -->
+  <line x1="130" y1="73" x2="130" y2="87" stroke="#9ca3af" stroke-width="2"/>
+  <text x="130" y="110" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">-3</text>
+  
+  <!-- Vạch -2 (170px) -->
+  <line x1="170" y1="73" x2="170" y2="87" stroke="#9ca3af" stroke-width="2"/>
+  <circle cx="170" cy="80" r="6" fill="#00ff88" filter="drop-shadow(0px 0px 5px #00ff88)"/>
+  <text x="170" y="110" fill="#ffffff" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">-2</text>
+  
+  <!-- Vạch -1 (210px) -->
+  <line x1="210" y1="73" x2="210" y2="87" stroke="#9ca3af" stroke-width="2"/>
+  <text x="210" y="110" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">-1</text>
+  
+  <!-- Vạch 0 (250px) -->
+  <line x1="250" y1="70" x2="250" y2="90" stroke="#00f0ff" stroke-width="2"/>
+  <text x="250" y="110" fill="#00f0ff" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">0</text>
+  
+  <!-- Vạch 1 (290px) -->
+  <line x1="290" y1="73" x2="290" y2="87" stroke="#9ca3af" stroke-width="2"/>
+  <text x="290" y="110" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">1</text>
+  
+  <!-- Vạch 2 (330px) -->
+  <line x1="330" y1="73" x2="330" y2="87" stroke="#9ca3af" stroke-width="2"/>
+  <text x="330" y="110" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">2</text>
+
+  <!-- Vạch 3 (370px) -->
+  <line x1="370" y1="73" x2="370" y2="87" stroke="#9ca3af" stroke-width="2"/>
+  <text x="370" y="110" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">3</text>
+  
+  <text x="225" y="35" fill="#e5e7eb" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">So sánh hai điểm biểu diễn số nguyên trên trục số</text>
+</svg>

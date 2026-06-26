@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <!-- Nền tối -->
+  <rect width="400" height="250" rx="15" fill="#0b0f19" stroke="#1f2937" stroke-width="2"/>
+  
+  <!-- Nhãn Vũ trụ U -->
+  <text x="20" y="35" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Vũ trụ U</text>
+  
+  <!-- Tập hợp A -->
+  <circle cx="200" cy="130" r="80" fill="rgba(0, 240, 255, 0.1)" stroke="#00f0ff" stroke-width="3" filter="drop-shadow(0px 0px 8px rgba(0, 240, 255, 0.5))"/>
+  <text x="200" y="80" fill="#00f0ff" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Tập hợp A</text>
+  
+  <!-- Các phần tử thuộc A -->
+  <text x="170" y="130" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">9</text>
+  <text x="210" y="150" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">1</text>
+  <text x="230" y="110" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">2</text>
+  
+  <!-- Các phần tử ngoài A -->
+  <text x="70" y="120" fill="#ff455f" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">5</text>
+  <text x="330" y="150" fill="#ff455f" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">7</text>
+  <text x="300" y="80" fill="#ff455f" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">3</text>
+</svg>

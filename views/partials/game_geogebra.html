@@ -1,0 +1,39 @@
+<!-- 9. GIAO DIỆN THỰC HÀNH VẼ HÌNH GEOGEBRA -->
+<div id="game-geogebra-view" class="app-view">
+  <div class="back-nav">
+    <button class="btn btn-danger btn-quit-game">Thoát ❌</button>
+  </div>
+  
+  <div class="geogebra-layout glass-card">
+    <h3>🎨 Thực hành vẽ hình trên lưới ô vuông</h3>
+    <p class="subtitle">Nhiệm vụ: Hãy chấm các điểm trên lưới và nối chúng để tạo ra hình học được yêu cầu.</p>
+    
+    <div class="geogebra-workspace">
+      <div class="workspace-left">
+        <div class="geogebra-task-card">
+          <h4>Nhiệm vụ hiện tại:</h4>
+          <p id="geogebra-task-desc" class="task-desc">Vẽ một **Hình chữ nhật** có chiều dài 6 ô, chiều rộng 4 ô.</p>
+          <div class="points-log">
+            <h5>Các điểm đã chấm:</h5>
+            <ul id="geogebra-points-list">
+              <li>Chưa có điểm nào</li>
+            </ul>
+          </div>
+          <div class="action-buttons">
+            <button class="btn btn-secondary btn-sm" id="btn-clear-geogebra">🧹 Vẽ lại từ đầu</button>
+            <button class="btn btn-success" id="btn-check-geogebra">Khớp hình vẽ 📐</button>
+          </div>
+          <p id="geogebra-feedback" class="feedback-text"></p>
+        </div>
+      </div>
+      
+      <div class="workspace-right">
+        <!-- Lưới vẽ ô vuông Canvas -->
+        <div class="canvas-grid-container">
+          <canvas id="geogebra-canvas" width="400" height="400"></canvas>
+        </div>
+        <p class="canvas-help-text">Click chuột lên lưới để tạo các đỉnh, click đỉnh cuối trùng đỉnh đầu để hoàn thành nối hình.</p>
+      </div>
+    </div>
+  </div>
+</div>

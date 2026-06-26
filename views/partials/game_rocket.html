@@ -1,0 +1,42 @@
+<!-- 7. GIAO DIỆN GAME ROCKET MATH -->
+<div id="game-rocket-view" class="app-view">
+  <div class="back-nav">
+    <button class="btn btn-danger btn-quit-game">Thoát Game ❌</button>
+  </div>
+  
+  <div class="rocket-game-layout">
+    <div class="game-hud">
+      <div>Mạng: <span id="rocket-lives">❤️❤️❤️</span></div>
+      <div>Điểm bay xa: <span id="rocket-score" class="neon-text">0</span> mét</div>
+    </div>
+    
+    <div id="game-screen" class="game-screen-area">
+      <!-- Khu vực hiển thị game (Rocket và thiên thạch rơi) -->
+      <div id="game-ship">🚀</div>
+      <div id="asteroid-container"></div>
+      
+      <!-- Khung hỏi của thiên thạch -->
+      <div id="game-question-bubble" class="hidden">
+        <p id="game-question-text">-3 + 8 = ?</p>
+        <div class="game-options" id="game-options-container">
+          <!-- Các nút đáp án bay -->
+        </div>
+      </div>
+      
+      <!-- Màn hình bắt đầu game -->
+      <div id="game-start-overlay" class="game-overlay">
+        <h3>Phi Thuyền Tính Nhẩm</h3>
+        <p>Né tránh hoặc bắn phá thiên thạch bằng cách trả lời các phép toán nhanh.</p>
+        <button class="btn btn-success btn-lg" id="btn-play-rocket">BẮT ĐẦU PHÓNG 🛫</button>
+      </div>
+
+      <!-- Màn hình kết thúc game -->
+      <div id="game-over-overlay" class="game-overlay hidden">
+        <h3 class="text-danger">PHI THUYỀN BỊ HỎNG!</h3>
+        <p>Quãng đường phi thuyền đã bay: <span id="game-final-score">0</span> mét</p>
+        <p id="game-new-record-text" class="text-success hidden">🎉 ĐÂY LÀ KỶ LỤC MỚI CỦA EM! 🎉</p>
+        <button class="btn btn-primary" id="btn-retry-rocket">Chơi Lại 🔄</button>
+      </div>
+    </div>
+  </div>
+</div>

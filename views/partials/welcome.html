@@ -1,0 +1,47 @@
+<!-- 1. GIAO DIỆN ĐĂNG NHẬP / ĐĂNG KÝ -->
+<div id="welcome-view" class="view-panel active">
+  <div class="glass-card welcome-card">
+    <div class="cosmic-avatar-main">🪐</div>
+    <h1 class="logo-text">Vũ Trụ Toán 6</h1>
+    <p class="subtitle">Bám sát chương trình sách Cánh Diều Tập 1</p>
+    
+    <!-- Tab Headers -->
+    <div class="auth-tabs">
+      <button class="auth-tab-btn active" id="auth-tab-login" onclick="switchAuthTab('login')">Đăng nhập</button>
+      <button class="auth-tab-btn" id="auth-tab-register" onclick="switchAuthTab('register')">Đăng ký</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="login-form" class="auth-form active">
+      <div class="input-group">
+        <label for="login-username">Tên phi hành gia:</label>
+        <input type="text" id="login-username" placeholder="Nhập tên đăng nhập..." required autocomplete="off">
+      </div>
+      <div class="input-group">
+        <label for="login-password">Mật khẩu:</label>
+        <input type="password" id="login-password" placeholder="Nhập mật khẩu..." required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-glow">Bắt đầu thám hiểm 🚀</button>
+      <p id="login-error-msg" class="error-text hidden"></p>
+    </form>
+
+    <!-- Register Form -->
+    <form id="register-form" class="auth-form hidden">
+      <div class="input-group">
+        <label for="register-username">Tên phi hành gia mới:</label>
+        <input type="text" id="register-username" placeholder="Tên đăng ký..." required autocomplete="off">
+      </div>
+      <div class="input-group">
+        <label for="register-password">Mật khẩu:</label>
+        <input type="password" id="register-password" placeholder="Mật khẩu của em..." required>
+      </div>
+      <div class="input-group">
+        <label for="register-confirm-password">Xác nhận mật khẩu:</label>
+        <input type="password" id="register-confirm-password" placeholder="Nhập lại mật khẩu..." required>
+      </div>
+      <button type="submit" class="btn btn-success btn-glow">Đăng ký tài khoản 🚀</button>
+      <p id="register-error-msg" class="error-text hidden"></p>
+      <p id="register-success-msg" class="success-text hidden"></p>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<!-- 8. GIAO DIỆN TRẢI NGHIỆM ĐẦU TƯ KINH DOANH -->
+<div id="game-business-view" class="app-view">
+  <div class="back-nav">
+    <button class="btn btn-danger btn-quit-game">Thoát ❌</button>
+  </div>
+  
+  <div class="business-layout glass-card">
+    <h3>💼 Hoạt động trải nghiệm: Đầu tư kinh doanh</h3>
+    <p class="subtitle">Tính toán số dư tài khoản của công ty thông qua các phép toán số nguyên âm và dương.</p>
+    
+    <div class="business-grid">
+      <div class="ledger-card">
+        <h4>Sổ sách kế toán tháng này:</h4>
+        <div class="ledger-entries" id="ledger-entries-list">
+          <!-- Điền các hoạt động (ví dụ: Nhập hàng: -500k, Bán hàng: +800k) -->
+        </div>
+        <div class="ledger-question">
+          <p class="question-prompt" id="business-question-text">Tổng số tiền lời/lỗ hiện tại của em là bao nhiêu?</p>
+          <div class="business-answer-area">
+            <input type="number" id="business-answer" placeholder="Điền số tiền (Ví dụ: -200 hoặc 300)...">
+            <button class="btn btn-primary" id="btn-submit-business">Kiểm tra 🧾</button>
+          </div>
+          <p id="business-feedback" class="feedback-text"></p>
+        </div>
+      </div>
+      
+      <div class="business-status-panel">
+        <div class="wallet-visual">
+          <span class="wallet-icon">🏦</span>
+          <div>
+            <h5>Số dư tài khoản:</h5>
+            <h3 id="business-balance-text" class="neon-text">0k VNĐ</h3>
+          </div>
+        </div>
+        
+        <div class="business-avatar-helper">
+          <div class="avatar-balloon">
+            "Chào nhà đầu tư nhí! Số tiền chi ra (lỗ) sẽ là số âm. Số tiền thu về (lời) sẽ là số dương. Hãy cộng tất cả lại nhé!"
+          </div>
+          <div class="helper-avatar">👨‍💼</div>
+        </div>
+        
+        <button class="btn btn-success w-100" id="btn-next-business">Giao dịch tiếp theo 💼</button>
+      </div>
+    </div>
+  </div>
+</div>

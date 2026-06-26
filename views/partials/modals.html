@@ -1,0 +1,40 @@
+<!-- MODAL TRA CỨU SỐ NGUYÊN TỐ -->
+<div id="prime-explorer-modal" class="modal-overlay hidden">
+  <div class="glass-card modal-content">
+    <button class="modal-close" id="btn-close-prime">✕</button>
+    <h3>🔢 Bộ Tra Cứu Số Nguyên Tố &lt; 1000</h3>
+    <p>Học sinh có thể nhập số để kiểm tra tính chất nguyên tố hoặc xem bảng danh sách nhanh.</p>
+    
+    <div class="prime-input-section">
+      <input type="number" id="prime-search-input" placeholder="Nhập số từ 2 đến 999..." min="2" max="999">
+      <button class="btn btn-primary" id="btn-check-prime">Kiểm tra</button>
+    </div>
+    <div id="prime-search-result" class="prime-result-box hidden"></div>
+    
+    <h4 class="mt-4">Các số nguyên tố nhỏ hơn 100:</h4>
+    <div class="prime-grid-list">
+      <span>2</span><span>3</span><span>5</span><span>7</span><span>11</span>
+      <span>13</span><span>17</span><span>19</span><span>23</span><span>29</span>
+      <span>31</span><span>37</span><span>41</span><span>43</span><span>47</span>
+      <span>53</span><span>59</span><span>61</span><span>67</span><span>71</span>
+      <span>73</span><span>79</span><span>83</span><span>89</span><span>97</span>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL TỪ ĐIỂN THUẬT NGỮ -->
+<div id="glossary-modal" class="modal-overlay hidden">
+  <div class="glass-card modal-content">
+    <button class="modal-close" id="btn-close-glossary">✕</button>
+    <h3>📖 Từ Điển Thuật Ngữ Toán Lớp 6</h3>
+    <p>Tra cứu nhanh định nghĩa các thuật ngữ toán học chính trong SGK Cánh Diều.</p>
+    
+    <div class="glossary-search-section">
+      <input type="text" id="glossary-search-input" placeholder="Gõ từ khóa cần tìm (Ví dụ: Số nguyên tố, hình thoi)...">
+    </div>
+    
+    <div class="glossary-list" id="glossary-list-container">
+      <!-- Nạp động từ api -->
+    </div>
+  </div>
+</div>
